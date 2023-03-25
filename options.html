@@ -1,24 +1,66 @@
 <!DOCTYPE html>
 <html>
   <head>
-    <title>My Test Extension Options</title>
+    <title>Configure Extension</title>
+
+  <style type="text/css">
+
+    body {
+      font-family: 'Open Sans', 'Helvetica Neue', Arial, sans-serif;
+    }
+
+    /* BEGIN Custom page style */
+
+    #start-page-small-width {
+      max-width: 500px;
+      margin: 100px auto 300px;
+    }
+
+    /* END Custom page style */
+
+    </style>
+    <link rel="stylesheet" href="./css/bootstrap.css">
   </head>
   <body>
-    <select id="color">
-      <option value="red">red</option>
-      <option value="green">green</option>
-      <option value="blue">blue</option>
-      <option value="yellow">yellow</option>
-    </select>
 
-    <label>
-      <input type="checkbox" id="like" />
-      I like colors.
-    </label>
+    <div id="start-page-small-width">
 
-    <div id="status"></div>
-    <button id="save">Save</button>
+        <h1>Extension Configure</h1>
 
-    <script src="options.js"></script>
+        <form>
+
+            <div class="form-group">
+                <label for="installIdInput">Install Id</label>    
+                <input 
+                    type="text" 
+                    class="form-control" 
+                    id="installIdInput" 
+                    placeholder="XXXXXXXX-XXXX-XXXX-XXXX-XXXXXXXXXXXX">
+                <small id="passwordHelpBlock" class="form-text text-muted">
+                    To find your Install Id, please visit the 
+                    <a href="https://dangerboard.com/apps/install-id-lookup/">Install Id Lookup page</a>, 
+                    enter a Quickcode.  Then copy and paste the Install Id here.
+                </small>
+            </div>
+
+            <div class="form-group form-check">
+                <input 
+                    type="checkbox" 
+                    class="form-check-input" 
+                    id="enableDarkModeCheck">
+                <label 
+                    class="form-check-label" 
+                    for="enableDarkModeCheck">Enable Dark Mode</label>
+            </div>
+            
+            <button type="submit" id="save" class="btn btn-primary">Submit</button>
+            <button type="submit" id="close" class="btn btn-primary">Close</button>
+
+            <div id="status"></div>
+        </form>
+    </div>
+
+    <script type="text/javascript" src="options.js"></script>
+    <script type="text/javascript" src="./js/bootstrap.js"></script>
   </body>
 </html>

@@ -56,29 +56,37 @@ fetch("https://api.dangerboard.com:8443/activity/".concat(installId))
 });
 }
 
+// Search functionality
+
 var shiftDown = false;
 
 $(function() {
 
-console.log('loading functions');
+    console.log('loading functions');
 
-$('#search-form input').keydown(function(e) {
+    $('#search-form input').keydown(function(e) {
 
-    console.log('search-form');
-    
-    if (e.keyCode == 13) {
-    e.preventDefault();
-    var query = $('#search-form input').val();
+        console.log('search-form');
+        
+        if (e.keyCode == 13) {
+        e.preventDefault();
+        var query = $('#search-form input').val();
 
-    console.log('search for: ' + query);
+        console.log('search for: ' + query);
 
-    query = query.replace(/ /g, '+', query);
-    var url = 'https://google.com/search?q=' + query;
+        query = query.replace(/ /g, '+', query);
+        var url = 'https://google.com/search?q=' + query;
 
-    $('<a>').attr('href', url).attr('target', '_blank')[0].click();
-    
-    $('#search-form input').val("");
-    }
+        $('<a>').attr('href', url).attr('target', '_blank')[0].click();
+        
+        $('#search-form input').val("");
+        }
+    });
+
 });
 
+// Extension Configuration
+
+document.querySelector('#go-to-options').addEventListener('click', function() {
+    window.open(chrome.runtime.getURL('options.html'));
 });
