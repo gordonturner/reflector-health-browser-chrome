@@ -1,0 +1,234 @@
+<head>
+
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+  <meta name="description" content="">
+  <meta name="author" content="">
+
+  <title>Start Page</title>
+
+  <style type="text/css">
+
+    body,
+    html {
+      width: 100%;
+      height: 100%;
+    }
+
+    body {
+      font-family: 'Open Sans', 'Helvetica Neue', Arial, sans-serif;
+    }
+
+    hr {
+      max-width: 50px;
+      border-width: 3px;
+      border-color: #4cae4c;
+    }
+
+    hr.light {
+      border-color: white;
+    }
+
+    a {
+      -webkit-transition: all 0.2s;
+      -moz-transition: all 0.2s;
+      transition: all 0.2s;
+    }
+
+    .text-black {
+      color: black;
+    }
+
+    h1,
+    h2,
+    h3,
+    h4,
+    h5,
+    h6 {
+      font-family: 'Open Sans', 'Helvetica Neue', Arial, sans-serif;
+      text-align: center;
+    }
+
+    p {
+      font-size: 16px;
+      line-height: 1.5;
+      margin-bottom: 20px;
+    }
+
+    body {
+      -webkit-tap-highlight-color: #222222;
+    }
+
+    ul li .new-section {
+      display: inline-block;
+      margin-top: 25px;
+    }
+
+
+
+    /* BEGIN Custom page style */
+
+    #start-page-small-width {
+      max-width: 1000px;
+      margin: 0 auto 300px;
+    }
+
+    /* END Custom page style */
+
+
+    /* BEGIN Search */
+
+    #search-form div {
+      width: 660px;
+      margin: 50px auto 50px;
+    }
+
+    #search-form div #s {
+      width: 660px;
+      margin: 0 auto;
+      height: 35px;
+    }
+
+    #search-form div #search-input {
+      width: 660px;
+      border: 0;
+      margin: 5px auto 0;
+      padding-left: 15px;
+      border: none;
+      border-radius: 2px;
+      box-shadow: 0 2px 2px 0 rgba(0, 0, 0, 0.16), 0 0 0 1px rgba(0, 0, 0, 0.08);
+      height: 44px;
+      outline: none;
+      transition: box-shadow 200ms cubic-bezier(0.4, 0.0, 0.2, 1);
+    }
+
+    /* END Search */
+
+
+
+
+    /* BEGIN flexbox */
+
+    .flex-container {
+      display: flex;
+      /*align-items: flex-start;*/
+      flex-flow: row wrap;
+      justify-content: space-around;
+
+      padding: 0;
+      margin: 0;
+      list-style: none;
+    }
+
+    .flex-item {
+      flex-grow: 1;
+      width: 200px;
+    }
+
+    .flex-item + .flex-item {
+      margin-left: 2%;
+    }
+
+    .flex-item ul {
+      padding-inline-start: 0px;
+    }
+
+    /* END flexbox */
+
+    /* BEGIN Numbers */
+
+    /* body {
+        background-color: black;
+    } */
+    .numbers {
+      font-family: Roboto, Helvetica, Arial, sans-serif;
+      color: rgb(204, 204, 220);
+      background-color: rgb(17, 18, 23);
+      width: fit-content;
+      margin-left:auto;
+      margin-right:auto;
+      margin-top: 200px;
+    }
+    .fitnessBlockElement {
+      float: left;
+      padding-left: 33px;
+    }
+    .fitnessTitle {
+      font-size: 23px;
+      font-weight: 500;
+      text-align: left;
+      color: #fff;
+    }
+    .fitnessValues {
+      font-size: 45px;
+      font-weight: 500;
+      text-align: center;
+    }
+    .fitnessUnits {
+      font-size: 35px;
+      font-weight: 500;
+    }
+    .fitnessMove {
+      color: #fc1d20;
+    }
+    .fitnessExercise {
+      color: #9cfc33;
+    }
+    .fitnessStand {
+      color: #32cbd4;
+    }
+    
+    /* END Numbers */
+
+  </style>
+
+</head>
+
+<body>
+
+<div id="start-page-small-width">
+
+  <!-- BEGIN Search -->
+
+  <form method="get" id="search-form" action="">
+    <div>
+      <input type="search" id="search-input"  name="s" size="15" value="" placeholder="Search" autocomplete="on" autofocus />
+    </div>
+  </form>
+
+  <!-- END Search -->
+
+  <div class="numbers">
+    <div class="fitnessBlock">
+      <div class="fitnessBlockElement">
+        <div class="fitnessTitle">Move</div>
+        <div>
+          <span id="fitnessMove" class="fitnessValues fitnessMove">---/---</span
+          ><span id="fitnessMoveUnit" class="fitnessUnits fitnessMove">CAL</span>
+        </div>
+      </div>
+      <div class="fitnessBlockElement">
+        <div class="fitnessTitle">Exercise</div>
+        <div>
+          <span id="fitnessExercise" class="fitnessValues fitnessExercise">---/---</span
+          ><span class="fitnessUnits fitnessExercise">MIN</span>
+        </div>
+      </div>
+      <div class="fitnessBlockElement">
+        <div class="fitnessTitle">Stand</div>
+        <div>
+          <span id="fitnessStand" class="fitnessValues fitnessStand">---/---</span
+          ><span class="fitnessUnits fitnessStand">HRS</span>
+        </div>
+      </div>
+    </div>
+  </div>
+  <!-- numbers end-->
+
+
+</div>
+
+<script type="text/javascript" src="./js/jquery-3.5.1.slim.min.js"></script>
+<script type="text/javascript" src="./js/bootstrap.js"></script>
+<script type="text/javascript" src="./js/app.js"></script>
+</body>

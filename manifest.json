@@ -1,0 +1,13 @@
+{
+  "name": "Dangerboard New Tab Start Page",
+  "description" : "When a new tab is created, this extension will load a page with Google search and Apple Rings",
+  "version": "1.0",
+  "manifest_version": 2,
+	"chrome_url_overrides" : {
+		"newtab": "index.html"
+	},
+  "permissions": [
+    "https://api.dangerboard.com/*",
+    "http://localhost/*"
+  ]
+}
