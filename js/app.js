@@ -5,7 +5,22 @@ document.addEventListener("DOMContentLoaded", ready);
 function ready() {
 console.log('ready() called')
 
-updatePage()
+installId = 'YYYYYY-XXXX-XXXX-XXXX-XXXXXXXXXXXX'
+enableDarkMode = false;
+
+chrome.storage.sync.get(
+    { installId: installId, enableDarkMode: enableDarkMode },
+    (items) => {
+      installId = items.installId;
+      enableDarkMode = items.enableDarkMode;
+      console.log("installId: " + installId);
+      console.log("enableDarkMode: " + enableDarkMode);
+      updatePage();
+    }
+);
+
+// Called after the storage sync, commenting out
+// updatePage()
 //   1000  1 sec
 //  10000 10 sec
 // 120000  2 min
@@ -16,10 +31,14 @@ const intervalID = setInterval( updatePage, 120000 );
 function updatePage() {
 console.log('updatePage() called')
 
+if ( enableDarkMode ) {
+    document.body.style.backgroundColor = "black";
+} else {
+    document.body.style.backgroundColor = "white";
+}
+
 const queryString = window.location.search;
 const urlParams = new URLSearchParams(queryString);
-//const installId = urlParams.get('install-id')
-const installId = 'DAEE38B7-883D-41D8-8D2B-CE841C625BDC'
 
 fetch("https://api.dangerboard.com:8443/activity/".concat(installId))
 .then((response) => response.json())
@@ -37,7 +56,7 @@ fetch("https://api.dangerboard.com:8443/activity/".concat(installId))
     var fitnessMove;
     var fitnessMoveGoal;
     var fitnessMoveUnit;
-    if ( data.activityMoveMode == 0 ){
+    if ( data.activityMoveMode == 0 ) {
     console.log( 'Setting fitnessMove to appleMoveTime/appleMoveTimeGoal' );
     fitnessMove = data.appleMoveTime;
     fitnessMoveGoal = data.appleMoveTimeGoal;
