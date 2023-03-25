@@ -8,6 +8,8 @@
 	},
   "permissions": [
     "https://api.dangerboard.com/*",
-    "http://localhost/*"
-  ]
+    "http://localhost/*",
+    "storage"
+  ],
+  "options_page": "options.html"
 }

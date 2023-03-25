@@ -9,62 +9,9 @@
 
   <style type="text/css">
 
-    body,
-    html {
-      width: 100%;
-      height: 100%;
-    }
-
     body {
       font-family: 'Open Sans', 'Helvetica Neue', Arial, sans-serif;
     }
-
-    hr {
-      max-width: 50px;
-      border-width: 3px;
-      border-color: #4cae4c;
-    }
-
-    hr.light {
-      border-color: white;
-    }
-
-    a {
-      -webkit-transition: all 0.2s;
-      -moz-transition: all 0.2s;
-      transition: all 0.2s;
-    }
-
-    .text-black {
-      color: black;
-    }
-
-    h1,
-    h2,
-    h3,
-    h4,
-    h5,
-    h6 {
-      font-family: 'Open Sans', 'Helvetica Neue', Arial, sans-serif;
-      text-align: center;
-    }
-
-    p {
-      font-size: 16px;
-      line-height: 1.5;
-      margin-bottom: 20px;
-    }
-
-    body {
-      -webkit-tap-highlight-color: #222222;
-    }
-
-    ul li .new-section {
-      display: inline-block;
-      margin-top: 25px;
-    }
-
-
 
     /* BEGIN Custom page style */
 
@@ -147,11 +94,14 @@
       width: fit-content;
       margin-left:auto;
       margin-right:auto;
-      margin-top: 200px;
+      margin-top: 100px;
     }
     .fitnessBlockElement {
       float: left;
       padding-left: 33px;
+    }
+    div:first-child{
+      padding-left: 0px;
     }
     .fitnessTitle {
       font-size: 23px;
@@ -179,6 +129,24 @@
     }
     
     /* END Numbers */
+
+    /* BEGIN Footer */
+
+    .footer {
+      position: absolute;
+      bottom: 0;
+      width: 100%;
+      height: 60px;
+      line-height: 60px;
+      text-align: center;
+    }
+
+    .footer #go-to-options {
+      color:darkgray;
+      text-decoration: none;
+    }
+
+    /* END Footer*/
 
   </style>
 
@@ -226,8 +194,16 @@
   <!-- numbers end-->
 
 
+
 </div>
 
+<footer class="footer">
+  <div class="container">
+    <a id="go-to-options" href="">Configure Extension</a>
+  </div>
+</footer>
+
+<script src="popup.js"></script>
 <script type="text/javascript" src="./js/jquery-3.5.1.slim.min.js"></script>
 <script type="text/javascript" src="./js/bootstrap.js"></script>
 <script type="text/javascript" src="./js/app.js"></script>
