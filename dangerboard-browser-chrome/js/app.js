@@ -33,8 +33,14 @@ console.log('updatePage() called')
 
 if ( enableDarkMode ) {
     document.body.style.backgroundColor = "black";
+    document.getElementById("fitnessMoveTitle").style.color = "white";
+    document.getElementById("fitnessExerciseTitle").style.color = "white";
+    document.getElementById("fitnessStandTitle").style.color = "white";
 } else {
     document.body.style.backgroundColor = "white";
+    document.getElementById("fitnessMoveTitle").style.color = "black";
+    document.getElementById("fitnessExerciseTitle").style.color = "black";
+    document.getElementById("fitnessStandTitle").style.color = "black";
 }
 
 const queryString = window.location.search;

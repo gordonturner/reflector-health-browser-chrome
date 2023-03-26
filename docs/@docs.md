@@ -10,4 +10,4 @@
 [X] Configuration for install id
 [X] Setup Configuration page
 [X] Upgrade to Manifest V3
-[ ] Publish in the Chrome Web Store
+[X] Publish in the Chrome Web Store
