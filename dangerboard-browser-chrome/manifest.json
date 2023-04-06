@@ -1,7 +1,7 @@
 {
   "name": "Dangerboard Extension",
   "description" : "When a new page or tab is created, this extension will load a page with Google search and activity summary.",
-  "version": "3.0",
+  "version": "4.0",
   "manifest_version": 3,
 	"chrome_url_overrides" : {
 		"newtab": "index.html"
