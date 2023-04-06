@@ -5,7 +5,7 @@ document.addEventListener("DOMContentLoaded", ready);
 function ready() {
 console.log('ready() called')
 
-installId = 'YYYYYY-XXXX-XXXX-XXXX-XXXXXXXXXXXX'
+installId = 'XXXXXXXX-XXXX-XXXX-XXXX-XXXXXXXXXXXX'
 enableDarkMode = false;
 
 chrome.storage.sync.get(
