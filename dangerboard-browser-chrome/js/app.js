@@ -46,7 +46,7 @@ if ( enableDarkMode ) {
 const queryString = window.location.search;
 const urlParams = new URLSearchParams(queryString);
 
-fetch("https://api.dangerboard.com:8443/v1/activity/".concat(installId))
+fetch("https://api.dangerboard.com:8443/v2/activity/".concat(installId).concat("/now"))
 .then((response) => response.json())
 .then((data) => {
 
