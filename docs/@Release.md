@@ -12,3 +12,4 @@ https://chrome.google.com/u/4/webstore/devconsole/9bc0178a-36a4-48de-a2d2-1ceb2b
 
 ## 2023-10-11 Release 5.0
 Set version to 5.0
+Followed steps
