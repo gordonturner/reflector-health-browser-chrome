@@ -1,5 +1,5 @@
 {
-  "name": "Dangerboard Extension",
+  "name": "Reflector Health Extension",
   "description" : "When a new page or tab is created, this extension will load a page with Google search and activity summary.",
   "version": "5.0",
   "manifest_version": 3,
@@ -10,7 +10,8 @@
     "storage"
   ],
   "host_permissions": [
-    "https://api.dangerboard.com/*",
+    "https://api.reflectorhealth.com/*",
+    "https://test1api.reflectorhealth.com/*",
     "http://localhost/*"
   ],
   "options_page": "options.html",
