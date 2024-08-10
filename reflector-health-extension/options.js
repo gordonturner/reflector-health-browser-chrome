@@ -21,7 +21,7 @@ const saveOptions = () => {
 // Restores select box and checkbox state using the preferences stored in chrome.storage.
 const restoreOptions = () => {
     chrome.storage.sync.get(
-      { installId: 'XXXXXXXX-XXXX-XXXX-XXXX-XXXXXXXXXXXX', enableDarkMode: false },
+      { installId: 'XXXXXX.XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX.XXXX', enableDarkMode: false },
       (items) => {
         document.getElementById('installIdInput').value = items.installId;
         document.getElementById('enableDarkModeCheck').checked = items.enableDarkMode;
