@@ -10,7 +10,8 @@ reflector-health-extension-X.0.zip
 https://chrome.google.com/u/3/webstore/devconsole/ffc3fc8d-521a-44d2-99f3-98333cabc465
 
 ## 2024-08-09 Release 1.0
-Rebranded to Reflector Health
+Google App Store:
+https://chromewebstore.google.com/detail/reflector-health-extensio/cclpncloicepekaoogojeeihccmepdal?hl=en
 
 ## 2023-10-11 Release 5.0
 Set version to 5.0
