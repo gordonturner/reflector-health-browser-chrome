@@ -43,9 +43,6 @@ if ( enableDarkMode ) {
     document.getElementById("fitnessStandTitle").style.color = "black";
 }
 
-const queryString = window.location.search;
-const urlParams = new URLSearchParams(queryString);
-
 fetch("https://api.reflectorhealth.com/v2/activity/".concat(installId).concat("/now"))
 .then((response) => response.json())
 .then((data) => {
@@ -80,35 +77,6 @@ fetch("https://api.reflectorhealth.com/v2/activity/".concat(installId).concat("/
     document.getElementById("fitnessStand").innerHTML = data.appleStandHours + '/' + data.appleStandHoursGoal;
 });
 }
-
-// Search functionality
-
-var shiftDown = false;
-
-$(function() {
-
-    console.log('loading functions');
-
-    $('#search-form input').keydown(function(e) {
-
-        console.log('search-form');
-        
-        if (e.keyCode == 13) {
-        e.preventDefault();
-        var query = $('#search-form input').val();
-
-        console.log('search for: ' + query);
-
-        query = query.replace(/ /g, '+', query);
-        var url = 'https://google.com/search?q=' + query;
-
-        $('<a>').attr('href', url).attr('target', '_blank')[0].click();
-        
-        $('#search-form input').val("");
-        }
-    });
-
-});
 
 // Extension Configuration
 
